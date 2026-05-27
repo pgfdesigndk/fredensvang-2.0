@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroBuilding from "@/assets/hero-building.jpg";
 import trustBlueprints from "@/assets/trust-blueprints.jpg";
 
@@ -32,11 +32,11 @@ function Index() {
           <span className="font-serif italic text-2xl tracking-tight">Fredensvang</span>
         </a>
         <div className="hidden md:flex items-center gap-10 text-sm font-medium uppercase tracking-widest">
+          <Link to="/ledige-boliger" className="hover:opacity-60 transition-opacity">
+            Ledige boliger
+          </Link>
           <a href="#ydelser" className="hover:opacity-60 transition-opacity">
-            Ejendomsadministration
-          </a>
-          <a href="#ydelser" className="hover:opacity-60 transition-opacity">
-            Bogholderi
+            Ydelser
           </a>
           <a href="#kontakt" className="hover:opacity-60 transition-opacity">
             Kontakt
