@@ -160,7 +160,7 @@ function ListingDetail() {
 
           <h3 className="text-[10px] uppercase tracking-[0.2em] text-brand-deep/40 mb-5">Faciliteter</h3>
           <ul className="grid sm:grid-cols-2 gap-y-3 gap-x-6 border-t border-brand-deep/10">
-            {listing.features.map((f) => (
+            {listing.features.map((f: string) => (
               <li key={f} className="flex items-center gap-3 border-b border-brand-deep/10 py-3 text-sm">
                 <span className="size-1.5 bg-brand-deep rounded-full" aria-hidden />
                 {f}
