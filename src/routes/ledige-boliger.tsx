@@ -196,7 +196,8 @@ function LedigeBoliger() {
                       <dd>{l.size} m²</dd>
                     </div>
                   </dl>
-                </article>
+                  </article>
+                </Link>
               </li>
             ))}
           </ul>
