@@ -153,7 +153,8 @@ function LedigeBoliger() {
           <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
             {filtered.map((l, i) => (
               <li key={l.id}>
-                <article className="group cursor-pointer">
+                <Link to="/ledige-boliger/$id" params={{ id: l.id }} className="block group cursor-pointer">
+                  <article>
                   <div className="relative overflow-hidden mb-6 bg-brand-mute aspect-[4/5]">
                     <img
                       src={apartmentInterior}
