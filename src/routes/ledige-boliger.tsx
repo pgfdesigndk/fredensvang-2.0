@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
+import { LISTINGS, formatPrice, type Listing } from "@/data/listings";
 import apartmentInterior from "@/assets/apartment-interior.jpg";
 
 export const Route = createFileRoute("/ledige-boliger")({
@@ -21,31 +22,6 @@ export const Route = createFileRoute("/ledige-boliger")({
   component: LedigeBoliger,
 });
 
-type Listing = {
-  id: string;
-  address: string;
-  city: string;
-  floor: string;
-  rooms: number;
-  size: number;
-  title: string;
-  price: number;
-};
-
-const LISTINGS: Listing[] = [
-  { id: "1", address: "Søndergade", city: "Gedsted", floor: "2. sal", rooms: 2, size: 60, title: "2-værelses lejlighed i Gedsted", price: 2950 },
-  { id: "2", address: "Bredgade", city: "Hurup Thy", floor: "1. sal", rooms: 2, size: 102, title: "2½ værelses lejlighed", price: 3950 },
-  { id: "3", address: "Thyborønvej", city: "Lemvig", floor: "1. sal", rooms: 2, size: 42, title: "2-værelses lejlighed udlejes", price: 2450 },
-  { id: "4", address: "Hjørringvej", city: "Østervrå", floor: "Stuen", rooms: 3, size: 66, title: "3-værelses lejlighed", price: 3550 },
-  { id: "5", address: "Randersvej", city: "Hobro", floor: "1. sal", rooms: 1, size: 30, title: "1 vær. lejlighed med eget køkken og bad", price: 2975 },
-  { id: "6", address: "Vestergade", city: "Hobro", floor: "2. sal", rooms: 3, size: 84, title: "3 vær. lejlighed med eget køkken og bad", price: 4250 },
-  { id: "7", address: "Skovvej", city: "Hobro", floor: "2. sal", rooms: 2, size: 63, title: "2-værelses lejlighed tæt på fjord og skov", price: 3675 },
-  { id: "8", address: "Nyvej", city: "Hobro", floor: "Stuen", rooms: 3, size: 95, title: "3 værelser incl. stor stue på 95 m²", price: 5750 },
-  { id: "9", address: "Brogade", city: "Hobro", floor: "1. sal", rooms: 3, size: 85, title: "3-værelses lejlighed udlejes", price: 5750 },
-];
-
-const formatPrice = (n: number) =>
-  new Intl.NumberFormat("da-DK").format(n) + " kr.";
 
 function LedigeBoliger() {
   const [city, setCity] = useState<string>("Alle");
@@ -177,7 +153,8 @@ function LedigeBoliger() {
           <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
             {filtered.map((l, i) => (
               <li key={l.id}>
-                <article className="group cursor-pointer">
+                <Link to="/ledige-boliger/$id" params={{ id: l.id }} className="block group cursor-pointer">
+                  <article>
                   <div className="relative overflow-hidden mb-6 bg-brand-mute aspect-[4/5]">
                     <img
                       src={apartmentInterior}
@@ -219,7 +196,8 @@ function LedigeBoliger() {
                       <dd>{l.size} m²</dd>
                     </div>
                   </dl>
-                </article>
+                  </article>
+                </Link>
               </li>
             ))}
           </ul>
