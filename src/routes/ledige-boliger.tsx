@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
+import { LISTINGS, formatPrice, type Listing } from "@/data/listings";
 import apartmentInterior from "@/assets/apartment-interior.jpg";
 
 export const Route = createFileRoute("/ledige-boliger")({
