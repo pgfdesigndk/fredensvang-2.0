@@ -24,9 +24,9 @@ const LedigeBoligerIndexRoute = LedigeBoligerIndexRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const LedigeBoligerIdRoute = LedigeBoligerIdRouteImport.update({
-  id: '/$id',
-  path: '/$id',
-  getParentRoute: () => LedigeBoligerRoute,
+  id: '/ledige-boliger/$id',
+  path: '/ledige-boliger/$id',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -55,6 +55,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LedigeBoligerIdRoute: typeof LedigeBoligerIdRoute
   LedigeBoligerIndexRoute: typeof LedigeBoligerIndexRoute
 }
 
@@ -76,16 +77,17 @@ declare module '@tanstack/react-router' {
     }
     '/ledige-boliger/$id': {
       id: '/ledige-boliger/$id'
-      path: '/$id'
+      path: '/ledige-boliger/$id'
       fullPath: '/ledige-boliger/$id'
       preLoaderRoute: typeof LedigeBoligerIdRouteImport
-      parentRoute: typeof LedigeBoligerRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LedigeBoligerIdRoute: LedigeBoligerIdRoute,
   LedigeBoligerIndexRoute: LedigeBoligerIndexRoute,
 }
 export const routeTree = rootRouteImport
