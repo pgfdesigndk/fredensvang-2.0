@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { LISTINGS, formatPrice, type Listing } from "@/data/listings";
 import apartmentInterior from "@/assets/apartment-interior.jpg";
 
-export const Route = createFileRoute("/ledige-boliger")({
+export const Route = createFileRoute("/ledige-boliger/")({
   head: () => ({
     meta: [
       { title: "Ledige boliger — Fredensvang Boligadministration" },

@@ -9,64 +9,58 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as LedigeBoligerRouteImport } from './routes/ledige-boliger'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LedigeBoligerIndexRouteImport } from './routes/ledige-boliger.index'
 import { Route as LedigeBoligerIdRouteImport } from './routes/ledige-boliger.$id'
 
-const LedigeBoligerRoute = LedigeBoligerRouteImport.update({
-  id: '/ledige-boliger',
-  path: '/ledige-boliger',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LedigeBoligerIndexRoute = LedigeBoligerIndexRouteImport.update({
+  id: '/ledige-boliger/',
+  path: '/ledige-boliger/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LedigeBoligerIdRoute = LedigeBoligerIdRouteImport.update({
-  id: '/$id',
-  path: '/$id',
-  getParentRoute: () => LedigeBoligerRoute,
+  id: '/ledige-boliger/$id',
+  path: '/ledige-boliger/$id',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/ledige-boliger': typeof LedigeBoligerRouteWithChildren
   '/ledige-boliger/$id': typeof LedigeBoligerIdRoute
+  '/ledige-boliger/': typeof LedigeBoligerIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/ledige-boliger': typeof LedigeBoligerRouteWithChildren
   '/ledige-boliger/$id': typeof LedigeBoligerIdRoute
+  '/ledige-boliger': typeof LedigeBoligerIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/ledige-boliger': typeof LedigeBoligerRouteWithChildren
   '/ledige-boliger/$id': typeof LedigeBoligerIdRoute
+  '/ledige-boliger/': typeof LedigeBoligerIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/ledige-boliger' | '/ledige-boliger/$id'
+  fullPaths: '/' | '/ledige-boliger/$id' | '/ledige-boliger/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/ledige-boliger' | '/ledige-boliger/$id'
-  id: '__root__' | '/' | '/ledige-boliger' | '/ledige-boliger/$id'
+  to: '/' | '/ledige-boliger/$id' | '/ledige-boliger'
+  id: '__root__' | '/' | '/ledige-boliger/$id' | '/ledige-boliger/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  LedigeBoligerRoute: typeof LedigeBoligerRouteWithChildren
+  LedigeBoligerIdRoute: typeof LedigeBoligerIdRoute
+  LedigeBoligerIndexRoute: typeof LedigeBoligerIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/ledige-boliger': {
-      id: '/ledige-boliger'
-      path: '/ledige-boliger'
-      fullPath: '/ledige-boliger'
-      preLoaderRoute: typeof LedigeBoligerRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
@@ -74,31 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ledige-boliger/': {
+      id: '/ledige-boliger/'
+      path: '/ledige-boliger'
+      fullPath: '/ledige-boliger/'
+      preLoaderRoute: typeof LedigeBoligerIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/ledige-boliger/$id': {
       id: '/ledige-boliger/$id'
-      path: '/$id'
+      path: '/ledige-boliger/$id'
       fullPath: '/ledige-boliger/$id'
       preLoaderRoute: typeof LedigeBoligerIdRouteImport
-      parentRoute: typeof LedigeBoligerRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
 
-interface LedigeBoligerRouteChildren {
-  LedigeBoligerIdRoute: typeof LedigeBoligerIdRoute
-}
-
-const LedigeBoligerRouteChildren: LedigeBoligerRouteChildren = {
-  LedigeBoligerIdRoute: LedigeBoligerIdRoute,
-}
-
-const LedigeBoligerRouteWithChildren = LedigeBoligerRoute._addFileChildren(
-  LedigeBoligerRouteChildren,
-)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  LedigeBoligerRoute: LedigeBoligerRouteWithChildren,
+  LedigeBoligerIdRoute: LedigeBoligerIdRoute,
+  LedigeBoligerIndexRoute: LedigeBoligerIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
