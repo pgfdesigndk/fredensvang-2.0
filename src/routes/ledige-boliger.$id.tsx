@@ -1,3 +1,4 @@
+import logo from "@/assets/fredensvang-logo.png";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
 import { LISTINGS, formatPrice } from "@/data/listings";
@@ -68,8 +69,7 @@ function ListingDetail() {
       {/* Navigation */}
       <nav className="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
         <Link to="/" className="flex items-center gap-2">
-          <div className="size-8 bg-brand-deep rounded-sm" aria-hidden />
-          <span className="font-serif italic text-2xl tracking-tight">Fredensvang</span>
+          <img src={logo} alt="Fredensvang Boligadministration ApS logo" className="h-14 w-auto" width={896} height={627} />
         </Link>
         <div className="hidden md:flex items-center gap-10 text-sm font-medium uppercase tracking-widest">
           <Link to="/" className="hover:opacity-60 transition-opacity">Startside</Link>
@@ -186,16 +186,16 @@ function ListingDetail() {
 
             <div className="mt-8 flex flex-col gap-3">
               <a
-                href={`mailto:info@fredensvang.com?subject=Interesse i ${encodeURIComponent(listing.address + ", " + listing.city)}`}
+                href={`mailto:kontor@fredensvang.com?subject=Interesse i ${encodeURIComponent(listing.address + ", " + listing.city)}`}
                 className="px-6 py-4 bg-brand-deep text-brand-surface text-sm font-medium uppercase tracking-widest hover:bg-brand-deep/90 transition-colors text-center"
               >
                 Skriv dig op
               </a>
               <a
-                href="tel:+4586143300"
+                href="tel:+4520505015"
                 className="px-6 py-4 border border-brand-deep/20 text-sm font-medium uppercase tracking-widest hover:bg-brand-deep hover:text-brand-surface transition-colors text-center"
               >
-                Ring (+45) 86 14 33 00
+                Ring (+45) 20 50 50 15
               </a>
             </div>
           </div>

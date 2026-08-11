@@ -1,3 +1,4 @@
+import logo from "@/assets/fredensvang-logo.png";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroBuilding from "@/assets/hero-building.jpg";
 import trustBlueprints from "@/assets/trust-blueprints.jpg";
@@ -28,8 +29,7 @@ function Index() {
       {/* Navigation */}
       <nav className="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
         <a href="#" className="flex items-center gap-2">
-          <div className="size-8 bg-brand-deep rounded-sm" aria-hidden />
-          <span className="font-serif italic text-2xl tracking-tight">Fredensvang</span>
+          <img src={logo} alt="Fredensvang Boligadministration ApS logo" className="h-14 w-auto" width={896} height={627} />
         </a>
         <div className="hidden md:flex items-center gap-10 text-sm font-medium uppercase tracking-widest">
           <Link to="/ledige-boliger" className="hover:opacity-60 transition-opacity">
@@ -171,7 +171,7 @@ function Index() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2">
               <a
-                href="mailto:info@fredensvang.com"
+                href="mailto:kontor@fredensvang.com"
                 className="group flex flex-col items-center justify-center px-8 py-16 md:py-24 bg-brand-deep text-brand-surface transition-all hover:bg-brand-deep/90"
               >
                 <span className="text-xs font-sans uppercase tracking-widest mb-4 opacity-70 group-hover:opacity-100 transition-opacity">
@@ -181,13 +181,13 @@ function Index() {
                 <div className="h-px w-8 bg-brand-surface/30 mt-6 group-hover:w-16 transition-all" />
               </a>
               <a
-                href="tel:+4586143300"
+                href="tel:+4520505015"
                 className="group flex flex-col items-center justify-center px-8 py-16 md:py-24 bg-brand-surface text-brand-deep border-l border-brand-deep/10 transition-all hover:bg-brand-deep/[0.03]"
               >
                 <span className="text-xs font-sans uppercase tracking-widest mb-4 text-brand-deep/40 group-hover:text-brand-deep/60 transition-colors">
                   Ring direkte
                 </span>
-                <span className="font-serif text-2xl">(+45) 86 14 33 00</span>
+                <span className="font-serif text-2xl">(+45) 20 50 50 15</span>
                 <div className="h-px w-8 bg-brand-deep/20 mt-6 group-hover:w-16 transition-all group-hover:bg-brand-deep/40" />
               </a>
             </div>
@@ -197,13 +197,12 @@ function Index() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 px-8 py-16 md:py-20">
             <div className="space-y-6">
               <div className="flex items-center gap-2">
-                <div className="size-6 bg-brand-deep rounded-sm" aria-hidden />
-                <span className="font-serif italic text-2xl tracking-tight">Fredensvang</span>
+                <img src={logo} alt="Fredensvang Boligadministration ApS logo" className="h-12 w-auto" width={896} height={627} loading="lazy" />
               </div>
               <address className="not-italic text-sm text-brand-deep/60 leading-relaxed">
-                Marselis Boulevard 172
+                Døstrupvej 72
                 <br />
-                8000 Aarhus C
+                9500 Hobro
                 <br />
                 Danmark
               </address>
@@ -278,7 +277,7 @@ function Index() {
           {/* Bottom Bar */}
           <div className="flex flex-col md:flex-row justify-between items-center px-8 py-8 border-t border-brand-deep/5 gap-6">
             <div className="text-[10px] font-sans tracking-widest text-brand-deep/40 uppercase order-2 md:order-1">
-              Fredensvang &copy; {new Date().getFullYear()} — CVR: 12345678
+              Fredensvang Boligadministration ApS &copy; {new Date().getFullYear()}
             </div>
             <div className="flex space-x-8 text-[10px] font-sans tracking-widest text-brand-deep/50 uppercase order-1 md:order-2">
               <a href="#" className="hover:text-brand-deep transition-colors">

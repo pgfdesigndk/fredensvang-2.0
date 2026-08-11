@@ -1,3 +1,4 @@
+import logo from "@/assets/fredensvang-logo.png";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { LISTINGS, formatPrice, type Listing } from "@/data/listings";
@@ -51,8 +52,7 @@ function LedigeBoliger() {
       {/* Navigation */}
       <nav className="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
         <Link to="/" className="flex items-center gap-2">
-          <div className="size-8 bg-brand-deep rounded-sm" aria-hidden />
-          <span className="font-serif italic text-2xl tracking-tight">Fredensvang</span>
+          <img src={logo} alt="Fredensvang Boligadministration ApS logo" className="h-14 w-auto" width={896} height={627} />
         </Link>
         <div className="hidden md:flex items-center gap-10 text-sm font-medium uppercase tracking-widest">
           <Link to="/" className="hover:opacity-60 transition-opacity">
@@ -213,16 +213,16 @@ function LedigeBoliger() {
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 md:justify-end">
             <a
-              href="mailto:info@fredensvang.com"
+              href="mailto:kontor@fredensvang.com"
               className="px-8 py-4 bg-brand-surface text-brand-deep text-sm font-medium uppercase tracking-widest hover:bg-brand-surface/90 transition-colors text-center"
             >
               Kontakt os
             </a>
             <a
-              href="tel:+4586143300"
+              href="tel:+4520505015"
               className="px-8 py-4 border border-brand-surface/30 text-sm font-medium uppercase tracking-widest hover:bg-brand-surface/10 transition-colors text-center"
             >
-              (+45) 86 14 33 00
+              (+45) 20 50 50 15
             </a>
           </div>
         </div>
@@ -233,13 +233,12 @@ function LedigeBoliger() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 px-8 py-16">
           <div className="space-y-6">
             <div className="flex items-center gap-2">
-              <div className="size-6 bg-brand-deep rounded-sm" aria-hidden />
-              <span className="font-serif italic text-2xl tracking-tight">Fredensvang</span>
+              <img src={logo} alt="Fredensvang Boligadministration ApS logo" className="h-12 w-auto" width={896} height={627} loading="lazy" />
             </div>
             <address className="not-italic text-sm text-brand-deep/60 leading-relaxed">
-              Marselis Boulevard 172
+              Døstrupvej 72
               <br />
-              8000 Aarhus C
+              9500 Hobro
             </address>
           </div>
           <div className="space-y-4">
@@ -258,8 +257,8 @@ function LedigeBoliger() {
               Kontakt
             </h3>
             <ul className="space-y-3 text-sm text-brand-deep/60">
-              <li>info@fredensvang.com</li>
-              <li>(+45) 86 14 33 00</li>
+              <li>kontor@fredensvang.com</li>
+              <li>(+45) 20 50 50 15</li>
             </ul>
           </div>
           <div className="space-y-4">
@@ -275,7 +274,7 @@ function LedigeBoliger() {
         <div className="border-t border-brand-deep/5">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between px-8 py-8 gap-4">
             <div className="text-[10px] tracking-widest text-brand-deep/40 uppercase">
-              Fredensvang &copy; {new Date().getFullYear()} — CVR: 12345678
+              Fredensvang Boligadministration ApS &copy; {new Date().getFullYear()}
             </div>
             <div className="flex gap-8 text-[10px] tracking-widest text-brand-deep/50 uppercase">
               <a href="#" className="hover:text-brand-deep">Persondatapolitik</a>
