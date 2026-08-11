@@ -1,3 +1,4 @@
+import logo from "@/assets/fredensvang-logo.png";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
 import { LISTINGS, formatPrice } from "@/data/listings";
@@ -68,8 +69,7 @@ function ListingDetail() {
       {/* Navigation */}
       <nav className="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
         <Link to="/" className="flex items-center gap-2">
-          <div className="size-8 bg-brand-deep rounded-sm" aria-hidden />
-          <span className="font-serif italic text-2xl tracking-tight">Fredensvang</span>
+          <img src={logo} alt="Fredensvang Boligadministration ApS logo" className="h-10 w-auto" width={896} height={627} />
         </Link>
         <div className="hidden md:flex items-center gap-10 text-sm font-medium uppercase tracking-widest">
           <Link to="/" className="hover:opacity-60 transition-opacity">Startside</Link>

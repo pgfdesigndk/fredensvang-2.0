@@ -1,3 +1,4 @@
+import logo from "@/assets/fredensvang-logo.png";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { LISTINGS, formatPrice, type Listing } from "@/data/listings";
@@ -51,8 +52,7 @@ function LedigeBoliger() {
       {/* Navigation */}
       <nav className="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
         <Link to="/" className="flex items-center gap-2">
-          <div className="size-8 bg-brand-deep rounded-sm" aria-hidden />
-          <span className="font-serif italic text-2xl tracking-tight">Fredensvang</span>
+          <img src={logo} alt="Fredensvang Boligadministration ApS logo" className="h-10 w-auto" width={896} height={627} />
         </Link>
         <div className="hidden md:flex items-center gap-10 text-sm font-medium uppercase tracking-widest">
           <Link to="/" className="hover:opacity-60 transition-opacity">
@@ -233,8 +233,7 @@ function LedigeBoliger() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 px-8 py-16">
           <div className="space-y-6">
             <div className="flex items-center gap-2">
-              <div className="size-6 bg-brand-deep rounded-sm" aria-hidden />
-              <span className="font-serif italic text-2xl tracking-tight">Fredensvang</span>
+              <img src={logo} alt="Fredensvang Boligadministration ApS logo" className="h-12 w-auto" width={896} height={627} loading="lazy" />
             </div>
             <address className="not-italic text-sm text-brand-deep/60 leading-relaxed">
               Døstrupvej 72
