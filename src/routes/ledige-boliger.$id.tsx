@@ -186,16 +186,16 @@ function ListingDetail() {
 
             <div className="mt-8 flex flex-col gap-3">
               <a
-                href={`mailto:info@fredensvang.com?subject=Interesse i ${encodeURIComponent(listing.address + ", " + listing.city)}`}
+                href={`mailto:kontor@fredensvang.com?subject=Interesse i ${encodeURIComponent(listing.address + ", " + listing.city)}`}
                 className="px-6 py-4 bg-brand-deep text-brand-surface text-sm font-medium uppercase tracking-widest hover:bg-brand-deep/90 transition-colors text-center"
               >
                 Skriv dig op
               </a>
               <a
-                href="tel:+4586143300"
+                href="tel:+4520505015"
                 className="px-6 py-4 border border-brand-deep/20 text-sm font-medium uppercase tracking-widest hover:bg-brand-deep hover:text-brand-surface transition-colors text-center"
               >
-                Ring (+45) 86 14 33 00
+                Ring (+45) 20 50 50 15
               </a>
             </div>
           </div>
