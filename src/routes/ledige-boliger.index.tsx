@@ -1,5 +1,6 @@
-import logo from "@/assets/fredensvang-logo.png";
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { SiteNav } from "@/components/site-nav";
+import { SiteFooter } from "@/components/site-footer";
 import { useMemo, useState } from "react";
 import { LISTINGS, formatPrice, type Listing } from "@/data/listings";
 import apartmentInterior from "@/assets/apartment-interior.jpg";
@@ -49,30 +50,7 @@ function LedigeBoliger() {
 
   return (
     <div className="min-h-screen bg-brand-surface font-sans text-brand-deep">
-      {/* Navigation */}
-      <nav className="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
-        <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Fredensvang Boligadministration ApS logo" className="h-14 w-auto" width={896} height={627} />
-        </Link>
-        <div className="hidden md:flex items-center gap-10 text-sm font-medium uppercase tracking-widest">
-          <Link to="/" className="hover:opacity-60 transition-opacity">
-            Startside
-          </Link>
-          <Link
-            to="/ledige-boliger"
-            className="hover:opacity-60 transition-opacity"
-            activeProps={{ className: "opacity-100 underline underline-offset-8" }}
-          >
-            Ledige boliger
-          </Link>
-          <Link to="/" hash="kontakt" className="hover:opacity-60 transition-opacity">
-            Kontakt
-          </Link>
-        </div>
-        <button className="border border-brand-deep/20 px-6 py-2 text-sm font-medium hover:bg-brand-deep hover:text-brand-surface transition-colors">
-          Log ind
-        </button>
-      </nav>
+      <SiteNav />
 
       {/* Header */}
       <section className="px-8 pt-12 pb-16 max-w-7xl mx-auto">
@@ -229,60 +207,7 @@ function LedigeBoliger() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-brand-mute">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 px-8 py-16">
-          <div className="space-y-6">
-            <div className="flex items-center gap-2">
-              <img src={logo} alt="Fredensvang Boligadministration ApS logo" className="h-12 w-auto" width={896} height={627} loading="lazy" />
-            </div>
-            <address className="not-italic text-sm text-brand-deep/60 leading-relaxed">
-              Døstrupvej 72
-              <br />
-              9500 Hobro
-            </address>
-          </div>
-          <div className="space-y-4">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-deep/40 mb-6">
-              Naviger
-            </h3>
-            <ul className="space-y-3 text-sm text-brand-deep/60">
-              <li><Link to="/" className="hover:text-brand-deep">Startside</Link></li>
-              <li><Link to="/ledige-boliger" className="hover:text-brand-deep">Ledige boliger</Link></li>
-              <li><Link to="/" hash="ydelser" className="hover:text-brand-deep">Ydelser</Link></li>
-              <li><Link to="/" hash="kontakt" className="hover:text-brand-deep">Kontakt</Link></li>
-            </ul>
-          </div>
-          <div className="space-y-4">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-deep/40 mb-6">
-              Kontakt
-            </h3>
-            <ul className="space-y-3 text-sm text-brand-deep/60">
-              <li>kontor@fredensvang.com</li>
-              <li>(+45) 20 50 50 15</li>
-            </ul>
-          </div>
-          <div className="space-y-4">
-            <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-deep/40 mb-6">
-              Åbningstider
-            </h3>
-            <ul className="space-y-3 text-sm text-brand-deep/60">
-              <li>Man–tor: 09–16</li>
-              <li>Fre: 09–14</li>
-            </ul>
-          </div>
-        </div>
-        <div className="border-t border-brand-deep/5">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between px-8 py-8 gap-4">
-            <div className="text-[10px] tracking-widest text-brand-deep/40 uppercase">
-              Fredensvang Boligadministration ApS &copy; {new Date().getFullYear()}
-            </div>
-            <div className="flex gap-8 text-[10px] tracking-widest text-brand-deep/50 uppercase">
-              <a href="#" className="hover:text-brand-deep">Persondatapolitik</a>
-              <a href="#" className="hover:text-brand-deep">Cookies</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
