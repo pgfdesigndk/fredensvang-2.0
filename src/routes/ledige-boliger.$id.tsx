@@ -1,5 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
+import { SiteNav } from "@/components/site-nav";
+import { SiteFooter } from "@/components/site-footer";
 import { LISTINGS, formatPrice } from "@/data/listings";
 import apartmentInterior from "@/assets/apartment-interior.jpg";
 import apartmentKitchen from "@/assets/apartment-kitchen.jpg";
