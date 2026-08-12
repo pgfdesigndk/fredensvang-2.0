@@ -37,10 +37,30 @@ function Index() {
               Professionel styring af <br />
               <span className="italic">din ejendom.</span>
             </h1>
-            <p className="max-w-md text-lg text-brand-deep/70 leading-relaxed">
-              Vi forener klassisk jysk ordentlighed med moderne digitale værktøjer til
-              ejendomsadministration, bogholderi og regnskab.
+            <p className="max-w-xl text-lg text-brand-deep/70 leading-relaxed mb-6">
+              Fredensvang Boligadministration har boliger til leje i store dele af Jylland. Vi
+              udlejer rækkehuse og lejligheder, der dækker de fleste boligsøgendes behov.
             </p>
+            <p className="max-w-xl text-brand-deep/60 leading-relaxed mb-8">
+              Ledige lejemål annonceres her på hjemmesiden, på Facebook og på forskellige
+              lejeportaler. Derudover tilbyder vi professionel ejendomsadministration, bogholderi
+              og regnskab til både bolig- og erhvervsejendomme.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                to="/ledige-boliger"
+                className="border border-brand-deep/20 px-8 py-3 text-sm font-medium uppercase tracking-widest hover:bg-brand-deep hover:text-brand-surface transition-colors"
+              >
+                Se ledige boliger
+              </Link>
+              <Link
+                to="/ejendomsadministration"
+                className="border border-brand-deep/20 px-8 py-3 text-sm font-medium uppercase tracking-widest hover:bg-brand-deep hover:text-brand-surface transition-colors"
+              >
+                Ejendomsadministration
+              </Link>
+            </div>
+
           </div>
           <div className="lg:col-span-4">
             <img
