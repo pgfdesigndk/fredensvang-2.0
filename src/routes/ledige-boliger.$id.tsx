@@ -1,6 +1,7 @@
-import logo from "@/assets/fredensvang-logo.png";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
+import { SiteNav } from "@/components/site-nav";
+import { SiteFooter } from "@/components/site-footer";
 import { LISTINGS, formatPrice } from "@/data/listings";
 import apartmentInterior from "@/assets/apartment-interior.jpg";
 import apartmentKitchen from "@/assets/apartment-kitchen.jpg";
@@ -66,20 +67,7 @@ function ListingDetail() {
 
   return (
     <div className="min-h-screen bg-brand-surface font-sans text-brand-deep">
-      {/* Navigation */}
-      <nav className="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
-        <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Fredensvang Boligadministration ApS logo" className="h-14 w-auto" width={896} height={627} />
-        </Link>
-        <div className="hidden md:flex items-center gap-10 text-sm font-medium uppercase tracking-widest">
-          <Link to="/" className="hover:opacity-60 transition-opacity">Startside</Link>
-          <Link to="/ledige-boliger" className="hover:opacity-60 transition-opacity">Ledige boliger</Link>
-          <Link to="/" hash="kontakt" className="hover:opacity-60 transition-opacity">Kontakt</Link>
-        </div>
-        <button className="border border-brand-deep/20 px-6 py-2 text-sm font-medium hover:bg-brand-deep hover:text-brand-surface transition-colors">
-          Log ind
-        </button>
-      </nav>
+      <SiteNav />
 
       {/* Breadcrumb */}
       <div className="px-8 max-w-7xl mx-auto pt-4 pb-8 text-[10px] uppercase tracking-[0.2em] text-brand-deep/40">
@@ -243,6 +231,8 @@ function ListingDetail() {
           </ul>
         </div>
       </section>
+
+      <SiteFooter />
     </div>
   );
 }

@@ -9,10 +9,22 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as OmOsRouteImport } from './routes/om-os'
+import { Route as EjendomsadministrationRouteImport } from './routes/ejendomsadministration'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LedigeBoligerIndexRouteImport } from './routes/ledige-boliger.index'
 import { Route as LedigeBoligerIdRouteImport } from './routes/ledige-boliger.$id'
 
+const OmOsRoute = OmOsRouteImport.update({
+  id: '/om-os',
+  path: '/om-os',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EjendomsadministrationRoute = EjendomsadministrationRouteImport.update({
+  id: '/ejendomsadministration',
+  path: '/ejendomsadministration',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -31,36 +43,74 @@ const LedigeBoligerIdRoute = LedigeBoligerIdRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ejendomsadministration': typeof EjendomsadministrationRoute
+  '/om-os': typeof OmOsRoute
   '/ledige-boliger/$id': typeof LedigeBoligerIdRoute
   '/ledige-boliger/': typeof LedigeBoligerIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ejendomsadministration': typeof EjendomsadministrationRoute
+  '/om-os': typeof OmOsRoute
   '/ledige-boliger/$id': typeof LedigeBoligerIdRoute
   '/ledige-boliger': typeof LedigeBoligerIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ejendomsadministration': typeof EjendomsadministrationRoute
+  '/om-os': typeof OmOsRoute
   '/ledige-boliger/$id': typeof LedigeBoligerIdRoute
   '/ledige-boliger/': typeof LedigeBoligerIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/ledige-boliger/$id' | '/ledige-boliger/'
+  fullPaths:
+    | '/'
+    | '/ejendomsadministration'
+    | '/om-os'
+    | '/ledige-boliger/$id'
+    | '/ledige-boliger/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/ledige-boliger/$id' | '/ledige-boliger'
-  id: '__root__' | '/' | '/ledige-boliger/$id' | '/ledige-boliger/'
+  to:
+    | '/'
+    | '/ejendomsadministration'
+    | '/om-os'
+    | '/ledige-boliger/$id'
+    | '/ledige-boliger'
+  id:
+    | '__root__'
+    | '/'
+    | '/ejendomsadministration'
+    | '/om-os'
+    | '/ledige-boliger/$id'
+    | '/ledige-boliger/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  EjendomsadministrationRoute: typeof EjendomsadministrationRoute
+  OmOsRoute: typeof OmOsRoute
   LedigeBoligerIdRoute: typeof LedigeBoligerIdRoute
   LedigeBoligerIndexRoute: typeof LedigeBoligerIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/om-os': {
+      id: '/om-os'
+      path: '/om-os'
+      fullPath: '/om-os'
+      preLoaderRoute: typeof OmOsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ejendomsadministration': {
+      id: '/ejendomsadministration'
+      path: '/ejendomsadministration'
+      fullPath: '/ejendomsadministration'
+      preLoaderRoute: typeof EjendomsadministrationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -87,9 +137,21 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  EjendomsadministrationRoute: EjendomsadministrationRoute,
+  OmOsRoute: OmOsRoute,
   LedigeBoligerIdRoute: LedigeBoligerIdRoute,
   LedigeBoligerIndexRoute: LedigeBoligerIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
