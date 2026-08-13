@@ -7,9 +7,9 @@ const activeProps = { className: "opacity-100 underline underline-offset-8" };
 
 const LINKS = [
   { to: "/", label: "Startside", exact: true },
-  { to: "/ledige-boliger", label: "Ledige boliger" },
-  { to: "/ejendomsadministration", label: "Ejendomsadministration" },
-  { to: "/om-os", label: "Om os" },
+  { to: "/ledige-boliger", label: "Ledige boliger", exact: false },
+  { to: "/ejendomsadministration", label: "Ejendomsadministration", exact: false },
+  { to: "/om-os", label: "Om os", exact: false },
 ] as const;
 
 export function SiteNav() {
