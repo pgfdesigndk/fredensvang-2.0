@@ -50,13 +50,13 @@ function OmOs() {
     <div className="min-h-screen bg-brand-surface font-sans text-brand-deep">
       <SiteNav />
 
-      <section className="px-8 pt-12 pb-20 max-w-7xl mx-auto">
+      <section className="px-5 sm:px-8 pt-12 pb-20 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-12 items-end border-b border-brand-deep/10 pb-16">
           <div className="lg:col-span-8">
             <span className="block text-xs font-medium uppercase tracking-widest text-brand-deep/40 mb-8">
               Om os
             </span>
-            <h1 className="font-serif text-6xl md:text-7xl leading-[0.95] tracking-tight mb-8">
+            <h1 className="font-serif text-3xl sm:text-4xl sm:text-6xl md:text-7xl leading-[0.95] tracking-tight mb-8">
               Mennesker bag <br />
               <span className="italic">administrationen.</span>
             </h1>
@@ -79,8 +79,8 @@ function OmOs() {
       </section>
 
       {/* Personale */}
-      <section className="px-8 pb-24 max-w-7xl mx-auto">
-        <h2 className="font-serif text-4xl italic mb-12">Personale</h2>
+      <section className="px-5 sm:px-8 pb-24 max-w-7xl mx-auto">
+        <h2 className="font-serif text-3xl sm:text-4xl italic mb-12">Personale</h2>
         <div className="grid md:grid-cols-2 gap-px bg-brand-deep/10 border border-brand-deep/10">
           {STAFF.map((p) => (
             <article key={p.name} className="bg-brand-surface p-10 md:p-12">
@@ -127,7 +127,7 @@ function OmOs() {
       </section>
 
       {/* Værdier */}
-      <section className="bg-brand-deep text-brand-surface py-24 px-8">
+      <section className="bg-brand-deep text-brand-surface py-16 sm:py-24 px-5 sm:px-8">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
           {[
             {
@@ -151,11 +151,11 @@ function OmOs() {
         </div>
       </section>
 
-      <section className="px-8 py-24 max-w-7xl mx-auto text-center">
-        <h2 className="font-serif text-4xl mb-6">Skal vi administrere din ejendom?</h2>
+      <section className="px-5 sm:px-8 py-16 sm:py-24 max-w-7xl mx-auto text-center">
+        <h2 className="font-serif text-3xl sm:text-4xl mb-6">Skal vi administrere din ejendom?</h2>
         <Link
           to="/ejendomsadministration"
-          className="inline-block border border-brand-deep/20 px-8 py-3 text-sm font-medium uppercase tracking-widest hover:bg-brand-deep hover:text-brand-surface transition-colors"
+          className="inline-block border border-brand-deep/20 px-5 sm:px-8 py-3 text-sm font-medium uppercase tracking-widest hover:bg-brand-deep hover:text-brand-surface transition-colors"
         >
           Se vores ydelser
         </Link>

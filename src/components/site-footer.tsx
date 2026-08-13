@@ -7,8 +7,8 @@ export function SiteFooter() {
       <div className="max-w-7xl mx-auto">
         {/* Top Section: CTA */}
         <div className="grid grid-cols-1 lg:grid-cols-2 border-b border-brand-deep/10">
-          <div className="px-8 py-16 md:py-24 lg:pr-20 flex flex-col justify-center lg:border-r border-brand-deep/10">
-            <h2 className="font-serif text-4xl md:text-5xl text-brand-deep leading-tight mb-6">
+          <div className="px-5 sm:px-8 py-16 md:py-24 lg:pr-20 flex flex-col justify-center lg:border-r border-brand-deep/10">
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-brand-deep leading-tight mb-6">
               Skal vi tage en <br />
               <span className="italic">uforpligtende snak?</span>
             </h2>
@@ -24,7 +24,7 @@ export function SiteFooter() {
           <div className="grid grid-cols-1 sm:grid-cols-2">
             <a
               href="mailto:kontor@fredensvang.com"
-              className="group flex flex-col items-center justify-center px-8 py-16 md:py-24 bg-brand-deep text-brand-surface transition-all hover:bg-brand-deep/90"
+              className="group flex flex-col items-center justify-center px-5 sm:px-8 py-16 md:py-24 bg-brand-deep text-brand-surface transition-all hover:bg-brand-deep/90"
             >
               <span className="text-xs font-sans uppercase tracking-widest mb-4 opacity-70 group-hover:opacity-100 transition-opacity">
                 Skriv til os
@@ -34,7 +34,7 @@ export function SiteFooter() {
             </a>
             <a
               href="tel:+4520505015"
-              className="group flex flex-col items-center justify-center px-8 py-16 md:py-24 bg-brand-surface text-brand-deep border-l border-brand-deep/10 transition-all hover:bg-brand-deep/[0.03]"
+              className="group flex flex-col items-center justify-center px-5 sm:px-8 py-16 md:py-24 bg-brand-surface text-brand-deep border-l border-brand-deep/10 transition-all hover:bg-brand-deep/[0.03]"
             >
               <span className="text-xs font-sans uppercase tracking-widest mb-4 text-brand-deep/40 group-hover:text-brand-deep/60 transition-colors">
                 Ring direkte
@@ -46,7 +46,7 @@ export function SiteFooter() {
         </div>
 
         {/* Middle Section: Links & Info */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 px-8 py-16 md:py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 px-5 sm:px-8 py-16 md:py-20">
           <div className="space-y-6">
             <img
               src={logo}
@@ -132,7 +132,7 @@ export function SiteFooter() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center px-8 py-8 border-t border-brand-deep/5 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-center px-5 sm:px-8 py-8 border-t border-brand-deep/5 gap-6">
           <div className="text-[10px] font-sans tracking-widest text-brand-deep/40 uppercase order-2 md:order-1">
             Fredensvang Boligadministration ApS &copy; {new Date().getFullYear()}
           </div>

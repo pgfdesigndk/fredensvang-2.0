@@ -46,13 +46,13 @@ function Ejendomsadministration() {
     <div className="min-h-screen bg-brand-surface font-sans text-brand-deep">
       <SiteNav />
 
-      <section className="px-8 pt-12 pb-20 max-w-7xl mx-auto">
+      <section className="px-5 sm:px-8 pt-12 pb-20 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-12 items-end">
           <div className="lg:col-span-7">
             <span className="block text-xs font-medium uppercase tracking-widest text-brand-deep/40 mb-8">
               Ydelse
             </span>
-            <h1 className="font-serif text-6xl md:text-7xl leading-[0.95] tracking-tight mb-8">
+            <h1 className="font-serif text-3xl sm:text-4xl sm:text-6xl md:text-7xl leading-[0.95] tracking-tight mb-8">
               Ejendoms­<span className="italic">administration.</span>
             </h1>
             <p className="max-w-xl text-lg text-brand-deep/70 leading-relaxed mb-6">
@@ -77,10 +77,10 @@ function Ejendomsadministration() {
       </section>
 
       {/* Ydelser */}
-      <section id="ydelser" className="bg-brand-deep text-brand-surface py-28 px-8">
+      <section id="ydelser" className="bg-brand-deep text-brand-surface py-16 sm:py-28 px-5 sm:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-8">
-            <h2 className="font-serif text-5xl italic">Vores ydelser omfatter bl.a.</h2>
+            <h2 className="font-serif text-3xl sm:text-5xl italic">Vores ydelser omfatter bl.a.</h2>
             <p className="max-w-sm text-brand-surface/60 text-sm leading-relaxed">
               Vi sammensætter aftalen efter ejendommens behov — fra ren bogføring til fuld
               administration.
@@ -102,7 +102,7 @@ function Ejendomsadministration() {
       </section>
 
       {/* Proces */}
-      <section className="px-8 py-28 max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+      <section className="px-5 sm:px-8 py-16 sm:py-28 max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
         <img
           src={apartmentExterior}
           alt="Udlejningsejendom set udefra"
@@ -112,7 +112,7 @@ function Ejendomsadministration() {
           className="w-full aspect-[4/3] object-cover outline-1 -outline-offset-1 outline-black/5"
         />
         <div>
-          <h2 className="font-serif text-4xl mb-8">Sådan kommer du i gang</h2>
+          <h2 className="font-serif text-3xl sm:text-4xl mb-8">Sådan kommer du i gang</h2>
           <ol className="space-y-8">
             {[
               ["Uforpligtende møde", "Vi gennemgår ejendommen, dens økonomi og dine ønsker."],
@@ -131,7 +131,7 @@ function Ejendomsadministration() {
           </ol>
           <Link
             to="/om-os"
-            className="inline-block mt-10 border border-brand-deep/20 px-8 py-3 text-sm font-medium uppercase tracking-widest hover:bg-brand-deep hover:text-brand-surface transition-colors"
+            className="inline-block mt-10 border border-brand-deep/20 px-5 sm:px-8 py-3 text-sm font-medium uppercase tracking-widest hover:bg-brand-deep hover:text-brand-surface transition-colors"
           >
             Mød administrationen
           </Link>
