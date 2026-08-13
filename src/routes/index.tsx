@@ -33,7 +33,7 @@ function Index() {
       <section className="px-5 sm:px-8 pt-12 pb-24 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-12 items-end">
           <div className="lg:col-span-8">
-            <h1 className="font-serif text-3xl sm:text-4xl sm:text-6xl md:text-8xl leading-[0.9] tracking-tight mb-8">
+            <h1 className="font-serif text-4xl sm:text-6xl md:text-8xl leading-[0.9] tracking-tight mb-8">
               Professionel styring af <br />
               <span className="italic">din ejendom.</span>
             </h1>

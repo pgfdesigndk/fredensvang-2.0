@@ -59,7 +59,7 @@ function LedigeBoliger() {
             <span className="block text-xs font-medium uppercase tracking-widest text-brand-deep/40 mb-6">
               Index — {filtered.length} ledige boliger
             </span>
-            <h1 className="font-serif text-3xl sm:text-4xl sm:text-6xl md:text-7xl leading-[0.95] tracking-tight">
+            <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl leading-[0.95] tracking-tight">
               Ledige boliger <br />
               <span className="italic">i Jylland.</span>
             </h1>

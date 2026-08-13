@@ -52,7 +52,7 @@ function Ejendomsadministration() {
             <span className="block text-xs font-medium uppercase tracking-widest text-brand-deep/40 mb-8">
               Ydelse
             </span>
-            <h1 className="font-serif text-3xl sm:text-4xl sm:text-6xl md:text-7xl leading-[0.95] tracking-tight mb-8">
+            <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl leading-[0.95] tracking-tight mb-8">
               Ejendoms­<span className="italic">administration.</span>
             </h1>
             <p className="max-w-xl text-lg text-brand-deep/70 leading-relaxed mb-6">

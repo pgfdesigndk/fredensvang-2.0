@@ -56,7 +56,7 @@ function OmOs() {
             <span className="block text-xs font-medium uppercase tracking-widest text-brand-deep/40 mb-8">
               Om os
             </span>
-            <h1 className="font-serif text-3xl sm:text-4xl sm:text-6xl md:text-7xl leading-[0.95] tracking-tight mb-8">
+            <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl leading-[0.95] tracking-tight mb-8">
               Mennesker bag <br />
               <span className="italic">administrationen.</span>
             </h1>
