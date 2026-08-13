@@ -29,9 +29,9 @@ export const Route = createFileRoute("/ledige-boliger/$id")({
   }),
   notFoundComponent: () => (
     <div className="min-h-screen bg-brand-surface flex items-center justify-center font-sans text-brand-deep">
-      <div className="text-center px-8">
+      <div className="text-center px-5 sm:px-8">
         <p className="text-[10px] uppercase tracking-[0.2em] text-brand-deep/40 mb-4">404</p>
-        <h1 className="font-serif text-5xl italic mb-6">Bolig ikke fundet.</h1>
+        <h1 className="font-serif text-3xl sm:text-5xl italic mb-6">Bolig ikke fundet.</h1>
         <Link
           to="/ledige-boliger"
           className="text-sm uppercase tracking-widest underline underline-offset-8"
@@ -43,8 +43,8 @@ export const Route = createFileRoute("/ledige-boliger/$id")({
   ),
   errorComponent: ({ reset }) => (
     <div className="min-h-screen bg-brand-surface flex items-center justify-center font-sans text-brand-deep">
-      <div className="text-center px-8">
-        <h1 className="font-serif text-4xl italic mb-6">Noget gik galt.</h1>
+      <div className="text-center px-5 sm:px-8">
+        <h1 className="font-serif text-3xl sm:text-4xl italic mb-6">Noget gik galt.</h1>
         <button onClick={reset} className="text-sm uppercase tracking-widest underline underline-offset-8">
           Prøv igen
         </button>
@@ -70,7 +70,7 @@ function ListingDetail() {
       <SiteNav />
 
       {/* Breadcrumb */}
-      <div className="px-8 max-w-7xl mx-auto pt-4 pb-8 text-[10px] uppercase tracking-[0.2em] text-brand-deep/40">
+      <div className="px-5 sm:px-8 max-w-7xl mx-auto pt-4 pb-8 text-[10px] uppercase tracking-[0.2em] text-brand-deep/40">
         <Link to="/" className="hover:text-brand-deep">Forside</Link>
         <span className="mx-3">/</span>
         <Link to="/ledige-boliger" className="hover:text-brand-deep">Ledige boliger</Link>
@@ -79,13 +79,13 @@ function ListingDetail() {
       </div>
 
       {/* Header */}
-      <header className="px-8 max-w-7xl mx-auto pb-10 border-b border-brand-deep/10">
+      <header className="px-5 sm:px-8 max-w-7xl mx-auto pb-10 border-b border-brand-deep/10">
         <div className="grid lg:grid-cols-12 gap-8 items-end">
           <div className="lg:col-span-8">
             <span className="block text-xs font-medium uppercase tracking-widest text-brand-deep/40 mb-6">
               Bolig nr. {listing.id.padStart(2, "0")} — {listing.city}
             </span>
-            <h1 className="font-serif text-5xl md:text-7xl leading-[0.95] tracking-tight">
+            <h1 className="font-serif text-3xl sm:text-5xl md:text-7xl leading-[0.95] tracking-tight">
               {listing.title.split(" ").slice(0, -2).join(" ")} <br />
               <span className="italic">{listing.title.split(" ").slice(-2).join(" ")}.</span>
             </h1>
@@ -94,13 +94,13 @@ function ListingDetail() {
             <span className="block text-[10px] font-medium uppercase tracking-[0.2em] text-brand-deep/40 mb-3">
               Månedlig leje
             </span>
-            <span className="font-serif text-5xl">{formatPrice(listing.price)}</span>
+            <span className="font-serif text-3xl sm:text-5xl">{formatPrice(listing.price)}</span>
           </div>
         </div>
       </header>
 
       {/* Gallery */}
-      <section className="px-8 max-w-7xl mx-auto py-12">
+      <section className="px-5 sm:px-8 max-w-7xl mx-auto py-12">
         <div className="grid lg:grid-cols-12 gap-6">
           <div className="lg:col-span-9">
             <div className="relative bg-brand-mute aspect-[4/3] overflow-hidden">
@@ -141,7 +141,7 @@ function ListingDetail() {
       </section>
 
       {/* Description + facts */}
-      <section className="px-8 max-w-7xl mx-auto pb-20 grid lg:grid-cols-12 gap-12">
+      <section className="px-5 sm:px-8 max-w-7xl mx-auto pb-20 grid lg:grid-cols-12 gap-12">
         <div className="lg:col-span-7">
           <h2 className="font-serif text-3xl italic mb-6">Om boligen</h2>
           <p className="text-brand-deep/75 leading-relaxed text-lg mb-10">{listing.description}</p>
@@ -191,7 +191,7 @@ function ListingDetail() {
       </section>
 
       {/* Related */}
-      <section className="bg-brand-mute px-8 py-20">
+      <section className="bg-brand-mute px-5 sm:px-8 py-14 sm:py-20">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-end justify-between mb-10 border-b border-brand-deep/10 pb-6">
             <h2 className="font-serif text-3xl md:text-4xl italic">Andre ledige boliger</h2>

@@ -30,10 +30,10 @@ function Index() {
       <SiteNav />
 
       {/* Hero */}
-      <section className="px-8 pt-12 pb-24 max-w-7xl mx-auto">
+      <section className="px-5 sm:px-8 pt-12 pb-24 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-12 items-end">
           <div className="lg:col-span-8">
-            <h1 className="font-serif text-6xl md:text-8xl leading-[0.9] tracking-tight mb-8">
+            <h1 className="font-serif text-4xl sm:text-6xl md:text-8xl leading-[0.9] tracking-tight mb-8">
               Professionel styring af <br />
               <span className="italic">din ejendom.</span>
             </h1>
@@ -49,13 +49,13 @@ function Index() {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/ledige-boliger"
-                className="border border-brand-deep/20 px-8 py-3 text-sm font-medium uppercase tracking-widest hover:bg-brand-deep hover:text-brand-surface transition-colors"
+                className="border border-brand-deep/20 px-5 sm:px-8 py-3 text-sm font-medium uppercase tracking-widest hover:bg-brand-deep hover:text-brand-surface transition-colors"
               >
                 Se ledige boliger
               </Link>
               <Link
                 to="/ejendomsadministration"
-                className="border border-brand-deep/20 px-8 py-3 text-sm font-medium uppercase tracking-widest hover:bg-brand-deep hover:text-brand-surface transition-colors"
+                className="border border-brand-deep/20 px-5 sm:px-8 py-3 text-sm font-medium uppercase tracking-widest hover:bg-brand-deep hover:text-brand-surface transition-colors"
               >
                 Ejendomsadministration
               </Link>
@@ -75,10 +75,10 @@ function Index() {
       </section>
 
       {/* Services */}
-      <section id="ydelser" className="bg-brand-deep text-brand-surface py-32 px-8">
+      <section id="ydelser" className="bg-brand-deep text-brand-surface py-14 sm:py-20 sm:py-32 px-5 sm:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-8">
-            <h2 className="font-serif text-5xl italic">Vores ydelser</h2>
+            <h2 className="font-serif text-3xl sm:text-5xl italic">Vores ydelser</h2>
             <p className="max-w-sm text-brand-surface/60 text-sm leading-relaxed">
               Alt fra den daglige drift til de komplekse årsregnskaber. Vi tager hånd om hele
               processen.
@@ -105,7 +105,7 @@ function Index() {
             ].map((s) => (
               <article
                 key={s.n}
-                className="p-12 bg-brand-deep group hover:bg-brand-surface/5 transition-colors"
+                className="p-8 sm:p-12 bg-brand-deep group hover:bg-brand-surface/5 transition-colors"
               >
                 <span className="block text-xs font-medium uppercase tracking-widest text-brand-surface/40 mb-12">
                   {s.n}
@@ -120,8 +120,8 @@ function Index() {
       </section>
 
       {/* Trust */}
-      <section className="px-8 py-32 max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-24 items-center">
+      <section className="px-5 sm:px-8 py-14 sm:py-20 sm:py-32 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           <div>
             <img
               src={trustBlueprints}
@@ -131,7 +131,7 @@ function Index() {
               loading="lazy"
               className="w-full aspect-video object-cover outline-1 -outline-offset-1 outline-black/5 mb-12"
             />
-            <h2 className="font-serif text-4xl mb-6">Tryghed gennem erfaring</h2>
+            <h2 className="font-serif text-3xl sm:text-4xl mb-6">Tryghed gennem erfaring</h2>
             <p className="text-brand-deep/70 leading-relaxed">
               Hos Fredensvang forstår vi, at administration handler om mennesker og deres hjem. Vi
               vægter den personlige dialog højt og sikrer, at bestyrelsen altid har det fulde
@@ -139,14 +139,14 @@ function Index() {
             </p>
           </div>
 
-          <dl className="space-y-16">
+          <dl className="space-y-10 sm:space-y-16">
             {[
               { v: "25+ år", l: "Erfaring i branchen" },
               { v: "150+", l: "Ejendomme under administration" },
               { v: "100%", l: "Digital workflow" },
             ].map((stat) => (
               <div key={stat.l} className="border-b border-brand-deep/10 pb-8">
-                <dt className="block font-serif text-5xl mb-2">{stat.v}</dt>
+                <dt className="block font-serif text-3xl sm:text-5xl mb-2">{stat.v}</dt>
                 <dd className="text-xs font-medium uppercase tracking-widest text-brand-deep/50">
                   {stat.l}
                 </dd>

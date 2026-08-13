@@ -53,13 +53,13 @@ function LedigeBoliger() {
       <SiteNav />
 
       {/* Header */}
-      <section className="px-8 pt-12 pb-16 max-w-7xl mx-auto">
+      <section className="px-5 sm:px-8 pt-12 pb-16 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-12 items-end border-b border-brand-deep/10 pb-12">
           <div className="lg:col-span-8">
             <span className="block text-xs font-medium uppercase tracking-widest text-brand-deep/40 mb-6">
               Index — {filtered.length} ledige boliger
             </span>
-            <h1 className="font-serif text-6xl md:text-7xl leading-[0.95] tracking-tight">
+            <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl leading-[0.95] tracking-tight">
               Ledige boliger <br />
               <span className="italic">i Jylland.</span>
             </h1>
@@ -74,7 +74,7 @@ function LedigeBoliger() {
       </section>
 
       {/* Filters */}
-      <section className="px-8 max-w-7xl mx-auto">
+      <section className="px-5 sm:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-brand-deep/10 border border-brand-deep/10">
           <FilterSelect
             label="By"
@@ -121,9 +121,9 @@ function LedigeBoliger() {
       </section>
 
       {/* Listings */}
-      <section className="px-8 py-16 max-w-7xl mx-auto">
+      <section className="px-5 sm:px-8 py-16 max-w-7xl mx-auto">
         {filtered.length === 0 ? (
-          <div className="border border-brand-deep/10 py-24 text-center">
+          <div className="border border-brand-deep/10 py-16 sm:py-24 text-center">
             <p className="font-serif text-3xl italic mb-3">Ingen boliger matcher.</p>
             <p className="text-sm text-brand-deep/60">Prøv at justere dine filtre.</p>
           </div>
@@ -183,22 +183,22 @@ function LedigeBoliger() {
       </section>
 
       {/* CTA strip */}
-      <section className="bg-brand-deep text-brand-surface px-8 py-24">
+      <section className="bg-brand-deep text-brand-surface px-5 sm:px-8 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-end">
-          <h2 className="font-serif text-4xl md:text-5xl leading-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl leading-tight">
             Fandt du ikke det rette? <br />
             <span className="italic text-brand-surface/70">Skriv dig op til ventelisten.</span>
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 md:justify-end">
             <a
               href="mailto:kontor@fredensvang.com"
-              className="px-8 py-4 bg-brand-surface text-brand-deep text-sm font-medium uppercase tracking-widest hover:bg-brand-surface/90 transition-colors text-center"
+              className="px-5 sm:px-8 py-4 bg-brand-surface text-brand-deep text-sm font-medium uppercase tracking-widest hover:bg-brand-surface/90 transition-colors text-center"
             >
               Kontakt os
             </a>
             <a
               href="tel:+4520505015"
-              className="px-8 py-4 border border-brand-surface/30 text-sm font-medium uppercase tracking-widest hover:bg-brand-surface/10 transition-colors text-center"
+              className="px-5 sm:px-8 py-4 border border-brand-surface/30 text-sm font-medium uppercase tracking-widest hover:bg-brand-surface/10 transition-colors text-center"
             >
               (+45) 20 50 50 15
             </a>
